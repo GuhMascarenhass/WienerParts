@@ -1,22 +1,298 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
-    
-    <head>
-        {% block head %}
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-            <script src="script.js"></script>
-            <link rel="stylesheet" href = "{% static 'style.css' %}">
-        {% endblock head %}
-        <title>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
 
-        </title>
-    </head>
-    <body>
-    </body>
-  </html>
-    
+    <title>
+      {% block title %}
+        test
+      {% endblock %}
+    </title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" onclick="location.reload(true);"><img src="{% static 'logowienergrande-removebg-preview.png' %}" alt="" /></a>
+        </li>
+        <li>
+          <a href="#" id="itens-colection">Biotécnica</a>
+
+          <div class="sub-menu-1">
+            <ul>
+              <li class="hover-sub" onclick="mostrarEscolha(0)">
+                <a href="#">CB350i</a>
+                <div class="sub-menu-2">
+                  <ul>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub1Menu')">411 - Bandeja de reagente BT (Branca Lisa)</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub2Menu')">430 - Painel traseiro (cor branco)</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub3Menu')">470 - Base principal (cores branco, vermelho e cinza)</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub4Menu')">471 - Frente do Monitor (cor cinza) 2pçs</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub5Menu')">473 - Tampa da bandeja de reação (cor cinza)</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub6Menu')">474 - Tampa da gaveta do ISE (cor cinza)</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub7Menu')">475 - Capa do braço (cor vermelho) 2pçs</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub8Menu')">477 - Painel principal (cor branco)</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub9Menu')">478 - Porta do reagente</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub10Menu')">479 - Porta do módulo ISE</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub11Menu')">481 - Base Inferior</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub12Menu')">482 - Chapa traseira estação de lavagem</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub13Menu')">483 - chapa traseira estação tangencial fan</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub14Menu')">484 - chapa estrutural</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub15Menu')">485 - protetor filtro de linha</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub16Menu')">486 - protetor fonte</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub17Menu')">487 - torre suporte bandeja 7pçs</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub18Menu')">488 - suporte bandeja reagente 2pçs</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub19Menu')">489 - suporte bandeja reação 3pçs</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub20Menu')">490 - Chapa de base reação</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub21Menu')">491 - Chapa de base bandeja de soro</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub22Menu')">492 - Chapa frontal</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('Sub23Menu')">493 - Estrutura do módulo ISE 3pçs</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="hover-sub" onclick="mostrarEscolha(1)">
+                <a href="#">CB400i</a>
+                <div class="sub-menu-2">
+                  <ul>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu2')">411 - Bandeja de reagente BT (Branca Lisa)</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu3')">430 - Painel traseiro (cor branco)</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu4')">470 - Base principal (cores branco, vermelho e cinza)</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu5')">473 - Tampa da bandeja de reação (cor cinza)</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu6')">474 - Tampa da gaveta do ISE (cor cinza)</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu7')">475 - Capa do braço (cor vermelho) 2pçs</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu8')">477 - Painel principal (cor branco)</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu9')">478 - Porta do reagente</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu10')">479 - Porta do módulo ISE</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu11')">480 - Frente do Monitor (cor branca) 2pçs</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu12')">481 - Base Inferior</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu13')">482 - Chapa traseira estação de lavagem</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu14')">483 - chapa traseira estação tangencial fan</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu15')">484 - chapa estrutural ZINCAGEM</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu16')">485 - protetor filtro de linha ZINCAGEM</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu17')">486 - protetor fonte ZINCAGEM</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu18')">487 - torre suporte bandeja 7pçs ZINCAGEM</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu19')">488 - suporte bandeja reagente 2pçs ZINCAGEM</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu20')">489 - suporte bandeja reação 3pçs ZINCAGEM</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu21')">490 - Chapa de base reação ZINCAGEM</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu22')">491 - Chapa de base bandeja de soro ZINCAGEM</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu23')">492 - Chapa frontal ZINCAGEM</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="toggleSubMenu('SubMenu24')">493 - Estrutura do módulo ISE 3pçs ZINCAGEM</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#" id="itens-colection">Labitec</a>
+
+          <div class="sub-menu-1">
+            <ul>
+              <li class="hover-sub" onclick="mostrarEscolha(2)">
+                <a href="#">CoL1</a>
+                <div class="sub-menu-2">
+                  <ul>
+                    <li>
+                      <a href="#">Ainda não existente</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="hover-sub" onclick="mostrarEscolha(3)">
+                <a href="#">CoL2</a>
+                <div class="sub-menu-2">
+                  <ul>
+                    <li>
+                      <a href="#">Ainda não existente</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="hover-sub" onclick="mostrarEscolha(4)">
+                <a href="#">CoL4</a>
+                <div class="sub-menu-2">
+                  <ul>
+                    <li>
+                      <a href="#">Ainda não existente</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="hover-sub" onclick="mostrarEscolha(5)">
+                <a href="#">CoL1 v2</a>
+                <div class="sub-menu-2">
+                  <ul>
+                    <li>
+                      <a href="#">Ainda não existente</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="hover-sub" onclick="mostrarEscolha(6)">
+                <a href="#">CoL2 v2</a>
+                <div class="sub-menu-2">
+                  <ul>
+                    <li>
+                      <a href="#">Ainda não existente</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="hover-sub" onclick="mostrarEscolha(7)">
+                <a href="#">CoL4 v2</a>
+                <div class="sub-menu-2">
+                  <ul>
+                    <li>
+                      <a href="#">Ainda não existente</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#" id="itens-colection">Metrolab</a>
+        </li>
+      </ul>
+    </nav>
+    <footer>
+      <div id="footer-imagem">
+        <ul>
+          <li>
+            <a title="Biotecnica" href="https://www.biotecnica.it/"><img id="biotecnica" src="{% static 'biotecnica.png' %}" alt="Biotécnica" /></a>
+          </li>
+          <li>
+            <a title="Labitec" href="https://www.labitec.de/"><img id="labitec" src="{% static 'labitec.png' %}" alt="Labitec" /></a>
+          </li>
+          <li>
+            <a title="Metrolab" href="https://www.wiener-lab.com/pt-BR/catalog/?gclid=CjwKCAiAk9itBhASEiwA1my_6466NJ1oQTXuGCDcHCmwqA3Atnl7GYj-8DE1jyQ8UXz-BCN1Io4IYxoCra4QAvD_BwE&idCategory=2&order=priority"><img id="metrolab" src="{% static 'wienermetrolab.png' %}" alt="WienerMetrolab" /></a>
+          </li>
+          <li>
+            <a title="Mindray" href="https://www.mindray.com/br"><img id="mindray" src="{% static 'mindray.png' %}" alt="Mindray" /></a>
+          </li>
+          <li>
+            <a title="Rayto" href="http://www.rayto.com/en/"><img id="rayto" src="{% static 'Rayto.png' %}" alt="Rayto" /></a>
+          </li>
+          <li>
+            <a title="Thermo Scientific" href="https://www.thermofisher.com/br/en/home.html?gclid=CjwKCAiAk9itBhASEiwA1my_6zAn3PcYDKBpu6nLFZBdVTYcKDwQlaWXc2lOW5l5U9oiuoExsr6eexoCCWsQAvD_BwE&cid=lsg_bus_sbu_r07_br_cp1532_pjt7418_fu_0se_gaw_pur_kt_institucional&ef_id=CjwKCAiAk9itBhASEiwA1my_6zAn3PcYDKBpu6nLFZBdVTYcKDwQlaWXc2lOW5l5U9oiuoExsr6eexoCCWsQAvD_BwE:G:s&s_kwcid=AL!3652!3!587685072929!b!!g!!thermo%20scientific!16564756729!135915388313&gad_source=1"><img id="thermo" src="{% static 'thermo.png' %}" alt="Thermo" /></a>
+          </li>
+        </ul>
+      </div>
+      <div id="footer-contato">
+        <h3>Contatos para suporte</h3>
+        <ul>
+          <li>
+            <a href="#">email@email.com.br</a>
+          </li>
+          <li>
+            <a href="#">email@email.com.br</a>
+          </li>
+          <li>
+            <a href="#">email@email.com.br</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

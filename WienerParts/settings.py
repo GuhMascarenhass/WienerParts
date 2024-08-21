@@ -102,9 +102,9 @@ STATIC_URL = "static/"
 
 STATICFILES_DIRS = [
     "static/crud_pinturas/css/",
-    "static/crud_pinturas/img/",
-    "static/crud_pinturas/js/",
-    "static/crud_pinturas/img/parceiros",
+    "crud_pinturas/img",
+    "crud_pinturas/js",
+    "crud_pinturas/img/parceiros",
 ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
