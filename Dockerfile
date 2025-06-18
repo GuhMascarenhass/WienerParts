@@ -16,9 +16,8 @@ COPY . .
 
 RUN npm install
 
-RUN npx tailwindcss -i ../src/input/input.css -o ../app/static/css/output.css --minify
+RUN npx tailwindcss -i ./app/static/src/tailwind.css -o ./app/static/css/output.css --minify
 
-WORKDIR /app
 
 EXPOSE 5000
 
