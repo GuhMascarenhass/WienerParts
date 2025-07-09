@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
     python3-venv \
     && apt-get clean
 
-WORKDIR /WIENER/app
+WORKDIR /WIENERpeca
 
 COPY requirements.txt .
 
@@ -16,7 +16,7 @@ COPY . .
 
 RUN npm install
 
-RUN npx tailwindcss -i ./app/static/src/tailwind.css -o ./app/static/css/main.css --minify
+RUN npx tailwindcss -i .peca/static/src/tailwind.css -o .peca/static/css/main.css --minify
 
 
 EXPOSE 5000
