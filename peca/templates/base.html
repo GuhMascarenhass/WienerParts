@@ -12,27 +12,21 @@
   <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
-
-  <div class="overflow-x-auto">
-    <table class="min-w-full divide-y divide-gray-200 bg-white text-sm text-left text-gray-900">
+  <div class="overflow-x-auto flex justify-center">
+    <table class="w-6/12 divide-y divide-gray-200 bg-white text-sm text-left text-gray-900">
       <thead class="bg-gray-100">
         <tr>
-          <th class="px-6 py-3 font-medium uppercase tracking-wider">GET</th>
-          <th class="px-6 py-3 font-medium uppercase tracking-wider">Email</th>
-          <th class="px-6 py-3 font-medium uppercase tracking-wider">Status</th>
+          <th class="px-6 py-3 font-medium uppercase tracking-wider"> Nome </th>
+          <th class="px-6 py-3 font-medium uppercase tracking-wider"> Tipo </th>        
         </tr>
       </thead>
       <tbody class="divide-y divide-gray-200">
-        <tr>
-          <td class="px-6 py-4">João Silva</td>
-          <td class="px-6 py-4">joao@example.com</td>
-          <td class="px-6 py-4 text-green-600 font-semibold">Ativo</td>
-        </tr>
-        <tr>
-          <td class="px-6 py-4">Maria Souza</td>
-          <td class="px-6 py-4">maria@example.com</td>
-          <td class="px-6 py-4 text-red-600 font-semibold">Inativo</td>
-        </tr>
+        {% for produto in dados %}
+          <tr>
+            <td class ="px-6 py-4"> {{produto.name}} </td>
+            <td class ="px-6 py-4"> {{produto.tipo}} </td>
+          </tr>
+        {% endfor %} 
       </tbody>
     </table>
   </div>
