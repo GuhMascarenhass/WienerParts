@@ -293,6 +293,18 @@ tailwind.config.js
 node_modules
 
 /instance
+
+
+
+
+
+
+
+
+
+
+
+
 /migrations
 
 

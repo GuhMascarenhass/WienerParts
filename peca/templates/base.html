@@ -25,6 +25,13 @@
           <tr>
             <td class ="px-6 py-4"> {{produto.name}} </td>
             <td class ="px-6 py-4"> {{produto.tipo}} </td>
+            <td class ="px-6 py-4"> {{produto.id}} </td>
+            <td class = "w-[30px] text-base bg-red-600">
+              <form method="POST" action="/delete/{{produto.id}}" class="w-full h-full"> 
+                {{form.hidden_tag()}}
+                <button type="submit" class = "w-full h-full"> x </button>
+              </form>
+            </td> 
           </tr>
         {% endfor %} 
       </tbody>
@@ -32,7 +39,7 @@
   </div>
 
   <div class="flex justify-center mt-10">
-    <form class="w-full max-w-lg" method= "post" action="" enctype="multipart/form-data">
+    <form class="w-full max-w-lg" method= "POST" action="/enviar" enctype="multipart/form-data">
       {{ form.hidden_tag() }}
         <div class="flex mb-6 w-full">
         <div class="w-full">
