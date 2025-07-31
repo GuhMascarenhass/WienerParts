@@ -12,5 +12,5 @@ class Product(db.Model):
 
 class Form_product(FlaskForm):
     name = StringField("Nome da peça", [validators.Length(min=3, max=40)])
-    type = StringField("Tipo da peça", [validators.Length(min=3, max=40)])
+    type_field = StringField("Tipo da peça", [validators.Length(min=3, max=40)])
     send = SubmitField("Salvar")
